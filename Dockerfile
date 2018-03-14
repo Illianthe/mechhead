@@ -9,7 +9,8 @@ RUN apk add --no-cache \
       less \
       jq \
       nodejs \
-      yarn
+      yarn \
+      imagemagick
 
 ENV APP_HOME /mechhead
 WORKDIR $APP_HOME
