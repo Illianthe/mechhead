@@ -1,24 +1,26 @@
-# README
+# MechHead
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A photo gallery using data generated from [/r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards/). This is an example site showcasing Webpacker (with Vue and ERB integrations) and ActiveStorage.
 
-Things you may want to cover:
+![MechHead](https://github.com/Illianthe/mechhead/blob/master/public/screenshot.jpg)
 
-* Ruby version
+## Development
 
-* System dependencies
+Spin up all Docker containers for development:
 
-* Configuration
+```
+docker-compose build
+docker-compose up
+```
 
-* Database creation
+Set up databases:
+```
+docker-compose run --rm web rails db:create
+docker-compose run --rm web rails db:schema:load
+```
 
-* Database initialization
+Add test data:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker-compose run --rm web rails reddit:fetch_images
+```
