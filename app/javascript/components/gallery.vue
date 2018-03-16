@@ -25,7 +25,7 @@
     },
 
     mounted() {
-      axios.get('http://mechhead.test/api/photos')
+      axios.get('http://mechhead.test/api/photos?randomize=true')
         .then(response => {
           this.items = response.data.photos;
         })
@@ -37,4 +37,15 @@
 </script>
 
 <style lang="scss" scoped>
+  #gallery {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+    grid-gap: 10px;
+    align-items: stretch;
+    justify-items: stretch;
+  }
 </style>

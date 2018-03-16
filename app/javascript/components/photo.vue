@@ -20,4 +20,13 @@
 </script>
 
 <style lang="scss" scoped>
+  a {
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 </style>

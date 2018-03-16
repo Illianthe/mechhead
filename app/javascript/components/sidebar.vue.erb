@@ -1,0 +1,41 @@
+<template>
+  <div id="sidebar">
+    <div class="container">
+      <a href="/"><h1>Mech<br />Head</h1></a>
+    </div>
+  </div>
+</template>
+
+<style>
+  @font-face {
+    font-family: 'Source Code Pro';
+    src: url('<%= ActionController::Base.helpers.font_url("Source_Code_Pro/SourceCodePro-Regular.ttf") %>');
+  }
+</style>
+
+<style lang="scss" scoped>
+  #sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #100845;
+    font-family: 'Open Sans';
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    display: block;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-family: 'Source Code Pro';
+    font-size: 4em;
+    font-weight: normal;
+    line-height: 1em;
+    border: 5px solid #fff;
+    padding: 20px;
+  }
+</style>
