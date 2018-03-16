@@ -18,4 +18,7 @@ WORKDIR $APP_HOME
 COPY Gemfile Gemfile.lock $APP_HOME/
 RUN bundle install
 
+COPY package.json yarn.lock $APP_HOME/
+RUN yarn install
+
 COPY . $APP_HOME
