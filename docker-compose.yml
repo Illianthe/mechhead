@@ -37,5 +37,20 @@ services:
       - nginx-proxy
       - db
 
+  webpack:
+    container_name: mechhead-webpack
+    build: '.'
+    command: ./bin/webpack-dev-server
+    volumes:
+      - .:/mechhead
+    expose:
+      - '3035'
+    environment:
+      VIRTUAL_HOST: assets.mechhead.test
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASS: postgres
+
 volumes:
   postgres-data:
