@@ -4,6 +4,11 @@ A photo gallery using data generated from [/r/MechanicalKeyboards](https://www.r
 
 ![MechHead](https://github.com/Illianthe/mechhead/blob/master/public/screenshot.jpg)
 
+## Requirements
+- Docker
+- Docker Compose
+
+
 ## Development
 
 Spin up all Docker containers for development:
@@ -11,6 +16,12 @@ Spin up all Docker containers for development:
 ```
 docker-compose build
 docker-compose up
+```
+
+Edit hosts file, `/etc/hosts` on most *nix systems
+```
+127.0.0.1        assets.mechhead.test
+127.0.0.1        mechhead.test
 ```
 
 Set up databases:
@@ -24,3 +35,5 @@ Add test data:
 ```
 docker-compose run --rm web rails reddit:fetch_images
 ```
+
+Open http://mechhead.test/
