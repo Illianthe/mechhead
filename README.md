@@ -4,7 +4,7 @@ A photo gallery using data generated from [/r/MechanicalKeyboards](https://www.r
 
 ![MechHead](https://github.com/Illianthe/mechhead/blob/master/public/screenshot.jpg)
 
-## Requirments
+## Requirements
 - Docker
 - Docker Compose
 
